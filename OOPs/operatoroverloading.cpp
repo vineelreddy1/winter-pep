@@ -83,7 +83,7 @@ int main(){
     point p8 = p2--;
     p8.print();
 
-    point p9 = p2--;
+    point p9 = --p2;
     p9.print();
 
    
