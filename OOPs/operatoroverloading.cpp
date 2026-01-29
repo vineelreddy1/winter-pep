@@ -59,11 +59,67 @@ class point {
     }
 
 
+
+    int getx(){
+        return x;
+
+    }
+    int gety(){
+        return y;
+    }
+
+    void setx(int x){
+        this->x = x;
+
+
+
+    }
+
+    void sety(int y){
+        this->y=y;
+
+    }
+
+    point operator==(point& otherPoint){
+
+        return point(this->x == otherPoint.x , this->y == otherPoint.y);
+
+    }
+    point operator!=(point& otherPoint){
+
+        return point(this->x != otherPoint.x , this->y != otherPoint.y);
+
+    }
+
+    
+    
 };
+
+ostream& operator<<(ostream& cout , point& Point){
+    cout << Point.getx() << " " << Point.gety();
+    return cout;
+}
+
+istream& operator>>(istream& input , point& Point){
+
+    int x,y;
+    input>>x>>y;
+
+    Point.setx(x);
+    Point.sety(y);
+
+    return input;
+   
+}
 
 int main(){
     point p1(10,15);
-    point p2(20,25);
+    point p2(20,15);
+    point res = (p1 == p2);
+    res.print();
+
+    point res1 = (p1!=p2);
+    res1.print();
 
 
     // p1.print();
@@ -74,17 +130,25 @@ int main(){
     // point p3 = p1.operator+(p2);
     // point p4 = p1.operator-(p2);
 
-    point p5 = p1++;
-    p5.print();
-    point p6 = ++p1;
-    p6.print();
+    // point p5 = p1++;
+    // p5.print();
+    // point p6 = ++p1;
+    // p6.print();
 
 
-    point p8 = p2--;
-    p8.print();
+    // point p8 = p2--;
+    // p8.print();
 
-    point p9 = --p2;
-    p9.print();
+    // point p9 = --p2;
+    // p9.print();
+
+
+    // cout<<p1<<endl;
+    // point p1;
+
+    // cin >> p1;
+
+
 
    
 
