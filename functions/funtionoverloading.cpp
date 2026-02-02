@@ -11,8 +11,8 @@ int add(int x, int y , int z){
 
 
 int main(){
-    add(1,2);
-    add(1,2,3);
+    cout << add(1,2) << endl;
+    cout << add(1,2,3);
 
     return 0;
 

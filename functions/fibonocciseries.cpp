@@ -14,8 +14,11 @@ int main(){
     cin >> n;
  
    
+    for (int i = 0; i < n ; ++i) {
+            cout << fibanocci(i) << " ";
+        }
+        cout << endl;
+    }
+    // int a = fibanocci(n);
+    // cout << a;
 
-    int a = fibanocci(n);
-    cout << a;
-
-} 
