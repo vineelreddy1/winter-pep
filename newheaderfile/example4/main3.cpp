@@ -14,9 +14,4 @@ int main()
     t.turnOff();
     t.turnOn();
 
-
-
-
-
-
 }
